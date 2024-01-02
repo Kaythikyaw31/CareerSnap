@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+   
+      background: rgb(201, 192, 201);
+      text-align: right;
+}
+
+.navbar nav ul li  {
+    display:inline-block;
+    margin: 20px;
+    
+}
+
+.navbar nav ul li a:hover 
+{
+    background-color: #df4a4a;
+    cursor: pointer;
+}
+.logo img{
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+  
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+}
+.button{
+    margin-top:30px;
+    margin-bottom: 30px;
+    display: block;
+    text-align: center;
+}
+.button button{
+    padding: 10px;
+    background: rgb(244, 148, 148);
+    color: white;
+    border: radius 20px;
+}
+h2{
+    margin-bottom:15px;
+    margin-top: 30px;
+}
+.img1{
+    display: inline-block;
+}
+
+.img1 img {
+    display: inline-block;
+    width: 40%;
+}
+.img2 {
+    text-align: left;
+}
+
+.img2 img {
+    width: 40%;
+}
+.img3 {
+    text-align: left;
+}
+
+.img3 img {
+    width: 40%;
+}
+.img4 {
+    text-align: left;
+}
+
+.img4 img {
+    width: 40%;
+}
+.img5 {
+    text-align: left;
+}
+
+.img5 img {
+    width: 40%;
+}
+p{
+    flex: 1;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #100f0f;
+    text-align: center;
+}
+
+#questions-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd;   
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #544d4d;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

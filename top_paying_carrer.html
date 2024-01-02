@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Paying Jobs in 2023</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+        #jobList {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .job-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .job-item h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .job-item p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Highest Paying Jobs in 2023</h1>
+
+    <!-- Chart Container -->
+    <div class="chart-container">
+        <canvas id="salaryChart" width="800" height="400"></canvas>
+    </div>
+
+    <!-- Job List -->
+    <ul id="jobList"></ul>
+
+    <script>
+        const jobData = {
+            labels: ['Medical Professionals', 'Data Scientist', 'Machine Learning Experts', 'Blockchain Developer',
+                'Full Stack Software Developer', 'Product Management', 'Management Consultant', 'Investment Banker',
+                'Chartered Accountant', 'Marketing Manager', 'Software Architect', 'AI Engineer', 'IT Manager',
+                'Petroleum Engineer', 'Financial Analyst', 'Legal Professionals', 'Psychiatrist', 'Aerospace Engineer',
+                'Real Estate Developer', 'Construction Manager', 'Hotel General Manager', 'Judge', 'Pilot',
+                'Cybersecurity Analyst', 'Marketing Director'
+            ],
+            averageSalaries: [10, 9.5, 6.9, 8, 6.7, 14, 11, 9.6, 9, 7, 29, 9, 13, 4, 5.5, 14, 8, 5, 9, 9, 16, 6.5, 27, 9, 6, 34],
+            highestSalaries: [17, 26, 22, 21, 17, 35, 34, 33, 18, 20, 50, 20, 25, 21, 11.5, 23, 21, 24, 36, 36, 35, 33, 70, 11, 98],
+            explanations: [
+                'Medical professionals encompass various roles in the healthcare industry, providing essential services and care.',
+                'Data Scientists analyze and interpret complex data sets, deriving insights to inform business decisions.',
+                'Machine Learning Experts specialize in developing algorithms that enable machines to learn and improve over time.',
+                'Blockchain Developers work on creating secure and transparent applications using blockchain technology.',
+                'Full Stack Software Developers design and develop comprehensive software applications.',
+                'Product Management involves overseeing the development, launch, and management of successful products.',
+                'Management Consultants provide strategic advice to organizations, helping them improve efficiency and performance.',
+                'Investment Bankers assist clients in raising capital and making strategic financial investments.',
+                'Chartered Accountants manage financial records, ensure compliance, and provide strategic financial advice.',
+                'Marketing Managers oversee marketing strategies, campaigns, and brand promotion for organizations.',
+                'Software Architects design and create high-level structures for efficient software development.',
+                'AI Engineers work on developing and implementing artificial intelligence solutions and technologies.',
+                'IT Managers oversee the technology infrastructure and ensure the smooth operation of IT systems within organizations.',
+                'Petroleum Engineers focus on the extraction, production, and exploration of oil and gas resources.',
+                'Financial Analysts analyze financial data to provide investment recommendations and strategic financial insights.',
+                'Legal Professionals, including Lawyers, provide legal advice, representation, and ensure legal compliance.',
+                'Psychiatrists diagnose and treat mental illnesses, providing critical mental health support.',
+                'Aerospace Engineers design and develop aircraft, spacecraft, and related systems.',
+                'Real Estate Developers manage and oversee real estate projects, from planning to completion.',
+                'Construction Managers coordinate and supervise construction projects, ensuring they meet quality and safety standards.',
+                'Hotel General Managers oversee the daily operations of hotels, ensuring a seamless guest experience.',
+                'Judges preside over legal proceedings, interpreting and applying the law in courtrooms.',
+                'Pilots operate aircraft for transportation or other purposes, ensuring safe and efficient flights.',
+                'Cybersecurity Analysts protect computer systems from cyber threats, ensuring data security and privacy.',
+                'Marketing Directors lead and oversee marketing teams, developing and executing comprehensive marketing strategies.'
+            ]
+        };
+
+        // Get the chart canvas element
+        const ctx = document.getElementById('salaryChart').getContext('2d');
+
+        // Create a bar chart
+        const salaryChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: jobData.labels,
+                datasets: [{
+                    label: 'Average Salary 2023 (Lakhs)',
+                    data: jobData.averageSalaries,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                }, {
+                    label: 'Highest Salary 2023 (Lakhs)',
+                    data: jobData.highestSalaries,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Populate job list
+        const jobList = document.getElementById('jobList');
+        for (let i = 0; i < jobData.labels.length; i++) {
+            const listItem = document.createElement('li');
+            listItem.classList.add('job-item');
+            listItem.innerHTML = `<h2>${jobData.labels[i]}</h2>
+                                 <p><em>Average Salary:</em> ${jobData.averageSalaries[i]} Lakhs</p>
+                                 <p><em>Highest Salary:</em> ${jobData.highestSalaries[i]} Lakhs</p>
+                                 <p><em>Explanation:</em> ${jobData.explanations[i]}</p>`;
+            jobList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
+
+
