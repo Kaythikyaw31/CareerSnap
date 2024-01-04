@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Career Recommendation System</title>
 </head>
+
 <body>
-    <header>
-<h1>Questions</h1>
-    </header>
-    
-    <section id="questions-section">
-        <div id="questions-container">
-        </div>
-        <button onclick="nextQuestions()">Next</button>
+    <section id="question-container">
+        <label id="question-label"></label>
+        <div  class="radio-options" id="question-options"></div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Your Company</p>
-    </footer>
+    <button id="next-btn" class="calculate-btn" onclick="nextQuestion()">Next</button>
 
-    <script src="javascript.js"></script>
+    <div id="result-container">
+        <p id="career-result"></p>
+        <p id="explanation"></p>
+        <ul id="result-details"></ul>
+        <ul id="career-examples"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>
-
-

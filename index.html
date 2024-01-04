@@ -1,99 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrer recomendation system</title>
-    <link rel="stylesheet" href="stylesheet.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Career Recommendation System</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+        .logo {
+            width: 80px; /* Adjust the width according to your logo size */
+            height: auto;
+            margin-right: 10px;
+            float: left;
+        }
+
+      .navbar {
+          background: rgb(201, 192, 201);
+          text-align: right;
+      }
+
+      .navbar nav ul li  {
+          display:inline-block;
+          margin: 20px;
+      }
+
+      .navbar nav ul li a:hover {
+          background-color: #df4a4a;
+          cursor: pointer;
+      }
+
+      .title {
+          text-align: center;
+          font-size: 50px;
+          font-family: cursive;
+      }
+
+      .button {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          display: block;
+          text-align: center;
+      }
+
+      .button button {
+          padding: 10px;
+          background: rgb(244, 148, 148);
+          color: white;
+          border-radius: 20px;
+      }
+
+      h2 {
+          margin-bottom: 15px;
+          margin-top: 30px;
+          text-align: center;
+      }
+
+      .img-container {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 40px;
+          text-align: center;
+      }
+
+      .img-container img {
+          width: 30%;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          margin: 20px;
+      }
+
+      .text-container {
+          width: 50%;
+      }
+
+      p {
+          font-size: 18px;
+          line-height: 1.6;
+      }
+  </style>
+</head>
+
+
+<body>
     <div class="navbar">
-      <nav>
-        <ul>
-          <li onclick="window.location.href='index.html'">Home</li>
-          <li onclick="window.location.href='recommendation.html'">Test</li>
-          <li onclick="window.location.href='top_paying_carrer.html'">Top Paying Career Options</li>
-      </ul>
-     </nav>
+        <nav>
+            <ul>
+              <img class="logo" src="images/career.jpg" alt="Logo">
+                <li onclick="window.location.href='index.html'">Home</li>
+                <li onclick="window.location.href='recommendation.html'">Test</li>
+                <li onclick="window.location.href='top_paying_career.html'">Top Paying Career Options</li>
+            </ul>
+        </nav>
     </div>
-    <div class="title">Know Your Carrer</div>
+    <div class="title">Know Your Career</div>
     <div class="button">
-      <a href="recommendation.html"><button>Take a Test</button></a>
+        <a href="recommendation.html"><button>Take a Test</button></a>
     </div>
-      <h2>What does our career recommendation system do?</h2>
-      <div class="img1">
-      <img src="images/carrer recommendation system img1.jpg" alt="">
+
+    <h2>Explore the World of Science, Commerce, and Art</h2>
+    <div class="img-container">
+      <img src="images/img1.png" alt="">
+        <div class="text-container">
+            <p>
+                Embark on a journey to uncover the fascinating realms of science, commerce, and art. Our innovative career recommendation system is designed to guide you through these diverse domains. Instead of relying on algorithms, we focus on the fundamental principles that define each field.
+            </p>
+        </div>
+      
     </div>
-      <p>
-        Our innovative career recommendation system is designed to revolutionize
-        the way individuals approach their professional journey. By leveraging
-        cutting-edge algorithms, it meticulously analyzes your educational
-        background, work experience, skill set, and personal preferences. Unlike
-        traditional systems, ours takes a holistic view of your profile, aiming
-        to understand not just what you've done but who you are. The result is a
-        comprehensive, personalized career roadmap that aligns with your unique
-        strengths, aspirations, and the ever-evolving landscape of the job
-        market.
-      </p>
-      <h2>How does our system work?</h2>
-      <div class="img2">
-        <img src="images/carrer recomendation system img2.png" alt="">
-      </div>
-      <p>
-        At the core of our system is a sophisticated blend of artificial
-        intelligence and data analytics. We go beyond surface-level matching by
-        delving deep into your individual characteristics. The system considers
-        your academic achievements, job history, specific skills, and even
-        factors like work environment preferences. It then cross-references this
-        information with a vast database of career trajectories, industry
-        trends, and emerging opportunities. The result is a dynamic and evolving
-        algorithm that adapts to your changing needs, ensuring that the career
-        suggestions provided are not just accurate but also forward-thinking.
-      </p>
-      <h2>Why should you try our career recommendation system?</h2>
-      <div class="img3">
-        <img src="images/carrer recomendation system img4.webp" alt="">
-      </div>
-      <p>
-        Embarking on a career journey is a significant life decision, and our
-        system is here to make that process informed, insightful, and, most
-        importantly, empowering. By trying our system, you gain access to a
-        wealth of personalized insights that extend beyond basic career
-        matching. We provide a comprehensive analysis of your skills, offer
-        guidance on potential skill development areas, and present a roadmap
-        that aligns with your long-term aspirations. Our commitment to accuracy,
-        innovation, and user-centric design sets us apart as a trusted partner
-        in your career exploration.
-      </p>
-      <h2>Is it user-friendly?</h2>
-      <div class="img4">
-        <img src="images/carrer recomendation system img5.png" alt="">
-      </div>
-      <p>
-        Absolutely, user-friendliness is at the heart of our system's design. We
-        understand that navigating the complexities of one's career can be
-        daunting, and we've made it a priority to simplify the process. Our
-        intuitive interface ensures a seamless user experience. From creating
-        your profile to receiving recommendations, every step is guided by clear
-        instructions and visual aids. We believe that a user-friendly system not
-        only enhances your experience but also empowers you to take charge of
-        your career with confidence.
-      </p>
-      <h2>How accurate are the career suggestions?</h2>
-      <div class="img5">
-        <img src="images/carrer recomendation system img3.jpeg">
-      </div>
-      <p>
-        Precision and accuracy are the cornerstones of our career recommendation
-        system. Our commitment to staying at the forefront of technological
-        advancements means that our algorithms are not static; they evolve in
-        real-time based on the latest industry trends, job market demands, and
-        user feedback. By marrying historical data with predictive analytics, we
-        strive to provide you with career suggestions that are not only
-        reflective of your current profile but also anticipate the future
-        landscape. The testimonials of countless users who have successfully
-        navigated their career paths with our system attest to the reliability
-        and accuracy of our recommendations.
-      </p>
-  </body>
+
+    <h2>Discover the Essence of Science</h2>
+    <div class="img-container">
+        <div class="text-container">
+            <p>
+                At the core of science lies a pursuit of knowledge and understanding. Dive into the world of scientific inquiry, experimentation, and discovery. Whether you are drawn to unraveling the mysteries of the natural world, exploring the cosmos, or conducting groundbreaking experiments, the field of science opens doors to limitless possibilities.
+            </p>
+        </div>
+        <img src="images/img2.jpg" alt="">
+    </div>
+
+    <h2>Navigate the Pathways of Commerce</h2>
+    <div class="img-container">
+      <img src="images/img4.webp" alt="">
+        <div class="text-container">
+            <p>
+                Commerce unveils the dynamic landscape of business, finance, and entrepreneurship. Delve into the intricacies of economic systems, financial strategies, and the art of building successful enterprises. Your journey in commerce involves strategic decision-making, market insights, and shaping the future of business landscapes.
+            </p>
+        </div>
+        
+    </div>
+
+    <h2>Embark on the Creative Odyssey of Art</h2>
+    <div class="img-container">
+        <div class="text-container">
+            <p>
+                Art is the expression of creativity, imagination, and cultural richness. Immerse yourself in the world of visual arts, literature, design, and performance. Whether you aspire to be a visual artist, writer, designer, or performer, the realm of art offers a canvas for self-expression and contributes to the vibrant tapestry of human culture.
+            </p>
+        </div>
+        <img src="images/img5.jpeg" alt="">
+    </div>
+
+    <h2>Craft Your Journey with Precision</h2>
+    <div class="img-container">
+      <img src="images/img3.png" alt="">
+        <div class="text-container">
+            <p>
+                Our career recommendation system is tailored to help you explore and navigate the distinctive paths of science, commerce, and art. It's not just about job matching; it's about empowering you to make informed decisions aligned with your passions and aspirations. Your journey awaits, filled with possibilities and opportunities.
+            </p>
+        </div>
+    </div>
+</body>
 </html>
